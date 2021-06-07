@@ -1,0 +1,24 @@
+<section>
+  <div class="container mt-5 ">
+
+    <div class="row">
+      {{#each products}}
+        <div class="col-md-3 p-3">
+          <div class="card" style="width: 16rem;height: 27rem";>
+            <img
+              src="/product-images/{{this._id}}.jpg"
+              class="card-img-top"
+              style="width: 14rem;height:16rem"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{this.Name}}</h5>
+              <p class="card-text">{{this.Description}}</p>
+              <a href="/add-to-cart/{{this._id}}" class="btn btn-primary">ADD TO CART</a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
