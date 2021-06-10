@@ -43,7 +43,7 @@ router.get('/signup',function(req,res,next){
 router.post('/signup',((req,res,next)=>{
 userHelpers.doSignup(req.body).then((response)=>{
 
-  console.log(response)
+ 
   req.session.loggedIn=true
   req.session.user=response
   res.redirect('/')
@@ -95,6 +95,7 @@ router.get('/add-to-cart/:id',(req,res)=>{
 })
 router.post('/change-product-quantity',(req,res,next)=>{
 
+   console.log(req.body)
    userHelpers.changeproductQuantity(req.body).then(()=>{
 
    })
